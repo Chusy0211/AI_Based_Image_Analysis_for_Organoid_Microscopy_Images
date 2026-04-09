@@ -54,7 +54,6 @@ class Fold5ModelPool:
     def get_model(self):
         with self.lock:
             try:
-                # 等待直到池中有可用的模型
                 return self.model_pool.get(block=True, timeout=5)
             except Exception as e:
                 logging.error(f"Error getting model from pool: {e}")
