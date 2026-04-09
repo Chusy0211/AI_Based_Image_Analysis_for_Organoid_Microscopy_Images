@@ -41,7 +41,7 @@ This repository includes Python code for training and inference.
 
 ---
 
-## Installation
+### Installation
 
 ```bash
 conda create -n cv python=3.12 -y
@@ -60,7 +60,7 @@ cd src && python train.py
 
 #### Inference
 ```shell
-cd src &&  python validate.py
+cd src && python validate.py
 ```
 
 ---
