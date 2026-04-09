@@ -60,7 +60,7 @@ cd src && python train.py
 
 #### Inference
 ```shell
-cd src &&  python infer.py
+cd src &&  python validate.py
 ```
 
 ---
