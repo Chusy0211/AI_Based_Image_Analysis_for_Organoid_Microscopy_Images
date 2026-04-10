@@ -11,6 +11,8 @@ datasets/
 ├── train/
 ├───── *.[jpg|png]
 src/
+├── checkpoints/
+├───── *.pth
 ├── model_pool.py
 ├── train.py
 ├── validate.py
@@ -28,6 +30,13 @@ The dataset consists of grayscale images in JPG and PNG format.
 - Image format: JPG, PNG
 - Resolution: [e.g., 224*224]
 
+
+### Data Access
+
+All data should be included in this repository under the `datasets/train` directory.
+
+If you want to access the full dataset, please refer to the paper.
+
 ---
 
 ## Code Description
@@ -43,11 +52,23 @@ This repository includes Python code for training and inference.
 
 ### Installation
 
+#### step1 install *conda [e.g., Miniconda]
+
+- linux installer
+```shell
+curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+```
+- other installer please refer to [https://www.anaconda.com/docs/getting-started/miniconda/install/overview](https://www.anaconda.com/docs/getting-started/miniconda/install/overview)
+
+#### step2 install lib
 ```bash
 conda create -n cv python=3.12 -y
 conda activate cv
 pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126
 pip install opencv-python
+pip install matplotlib
+pip install scikit-learn
 ```
 ---
 
